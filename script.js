@@ -2,12 +2,12 @@ const playerText = document.querySelector('#PlayerText');
 const computerText = document.querySelector('#ComputerText');
 const resultText = document.querySelector('#ResultText');
 const choicebtns = document.querySelectorAll('.ChoiceBtn');
-const scoreText = document.querySelector('#score');
+const scoreText = document.querySelector('#Score');
 
 let player;
 let computer;
 let result;
-let score;
+let score = 0;
 
 choicebtns.forEach(button => button.addEventListener('click', ()=>{
     player = button.textContent;
@@ -15,7 +15,8 @@ choicebtns.forEach(button => button.addEventListener('click', ()=>{
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkwinner();
-    scoreText.textContent = Highscore();
+    Highscore()
+    // scoreText.textContent = `Score: ${score}`; This line is unecessary
 } ));
 
 
@@ -48,6 +49,9 @@ const checkwinner = () =>{
 }
 
 const Highscore = () => {
-    if(resultText == 'WIN')
-      return 'aaaaaaaaa';
+    if(resultText.textContent == 'WIN'){
+        score++
+    }
+    // Refreshing the score text
+    scoreText.textContent = `Score: ${score}`;
 }

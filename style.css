@@ -36,12 +36,12 @@ width: 150px;
     }
 @media screen and (max-width: 600px){
  .maingame{
-    font-size: 15px;
+    font-size: 10px;
     word-wrap: normal;
  }   
 }
 @media screen and (min-width: 600px){
     .maingame{
-       font-size: 10px;
+       font-size: 15px;
     }   
    }
