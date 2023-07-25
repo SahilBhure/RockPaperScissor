@@ -15,7 +15,8 @@ choicebtns.forEach(button => button.addEventListener('click', ()=>{
     playerText.textContent = `Player: ${player}`;
     computerText.textContent = `Computer: ${computer}`;
     resultText.textContent = checkwinner();
-    Highscore()
+    Highscore();
+    Losing();
     // scoreText.textContent = `Score: ${score}`; This line is unecessary
 } ));
 
