@@ -55,3 +55,14 @@ const Highscore = () => {
     // Refreshing the score text
     scoreText.textContent = `Score: ${score}`;
 }
+ //adding a score decreasing method
+const Losing = () =>{
+    if(resultText.textContent == 'LOSE'){
+        if(score<=0){
+            score = 0;
+        }else{
+            score--;
+        }
+    }
+    scoreText.textContent = `Score: ${score}`;
+}
